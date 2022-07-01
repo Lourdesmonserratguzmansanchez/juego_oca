@@ -9,8 +9,8 @@ var turno;
 var turnoRoja = false;
 var turnoAmarilla = false;
 var movimiento=0;
-var casillasRoja = [[],[125,590],[240,590],[300,590],[350,590],[405,590],[460,590],[518,590],[565,590],[595,560],[595,510],[595,460],[595,408],[595,353],[595,300],[595,248],[595,195],[595,142],[595,95],[565,65],[515,65],[465,65],[410,65],[360,65],[306,65],[253,65],[200,65],[147,65],[101,65],[67,94],[69,147],[69,200],[69,253],[69,308],[69,365],[69,418],[69,468],[100,495],[150,495],[203,495],[255,495],[308,495],[363,495],[417,495],[467,495],[503,465],[503,410],[503,352],[503,300],[503,245],[503,190],[470,155],[417,155],[361,155],[305,155],[250,155],[197,155],[165,197],[165,252],[165,310],[165,365],[195,407],[250,407],[310,330],[],[],[],[],[]];
-var casillasAmarilla = [[],[125,625],[240,625],[300,625],[350,625],[405,625],[460,625],[518,625],[575,625],[630,580],[630,510],[630,460],[630,408],[630,353],[630,300],[630,248],[630,195],[630,142],[630,70],[580,30],[515,30],[465,30],[410,30],[360,30],[306,30],[253,30],[200,30],[147,30],[80,30],[35,75],[35,147],[35,200],[35,253],[35,308],[35,365],[35,418],[35,488],[80,530],[150,530],[203,530],[255,530],[308,530],[363,530],[417,530],[480,530],[540,485],[540,410],[540,352],[540,300],[540,245],[540,160],[500,120],[417,120],[361,120],[305,120],[250,120],[170,120],[128,170],[128,252],[128,310],[128,385],[170,442],[250,442],[350,330],[],[],[],[],[]];
+var casillasRoja = [[],[145,519],[238,504],[360,515],[425,500],[522,496],[624,491],[717,500],[746,461],[746,359],[747,262],[747,161],[740,118],[697,35],[600,41],[499,37],[402,40],[304,40],[202,39],[77,34],[43,109],[45,202],[49,297],[99,357],[70,440],[175,429],[294,384],[395,373],[491,379],[583,430],[626,333],[624,254],[595,144],[501,146],[399,150],[304,148],[196,147],[148,229],[163,322],[301,270],[423,314],[],[],[],[],[]];
+var casillasAmarilla = [[],[143,557],[226,551],[354,560],[427,551],[518,547],[621,546],[721,549],[794,503],[746,412],[748,316],[746,212],[796,115],[697,97],[602,96],[500,102],[399,93],[302,40],[200,87],[126,77],[95,108],[103,204],[103,301],[51,403],[131,444],[248,432],[293,439],[395,432],[487,431],[655,434],[693,355],[693,247],[597,207],[499,191],[396,194],[301,205],[253,194],[208,224],[235,320],[305,316],[481,314],[],[],[],[],[]];
 var turnosPerdidosRoja = 0;
 var turnosPerdidosAmarilla = 0;
 var turnosPerdidos = turnosPerdidosRoja + turnosPerdidosAmarilla;
@@ -195,25 +195,6 @@ function comprobarCasilla(casilla){
 	else if(casilla == 36){
 		casilla_36();
 	}
-	else if(casilla == 41){
-		casilla_41();
-	}
-	else if(casilla == 45){
-		casilla_45();
-	}
-	else if(casilla == 50){
-		casilla_50();
-	}
-	else if(casilla == 54){
-		casilla_54();
-	}
-	else if(casilla == 59){
-		casilla_59();
-	}
-	else if(casilla == 63){
-		casilla_63();
-	}
-	//Puentes
 	else if(casilla == 6){
 		casilla_6();
 	}
@@ -224,44 +205,12 @@ function comprobarCasilla(casilla){
 	else if(casilla == 26){
 		casilla_26();
 	}
-	else if(casilla == 53){
-		casilla_53();
-	}
-	//Calavera
-	else if(casilla == 58){
-		casilla_58();
-	}
-	//El laberinto
-	else if(casilla == 42){
-		casilla_42();
-	}
-	//La posada 
 	else if(casilla == 19){
 		casilla_19();
 	}
 	//El pozo
 	else if(casilla == 31){
 		casilla_31();
-	}
-	//La carcel
-	else if(casilla == 52){
-		casilla_52();
-	}
-	//Casillas superiores al final cuando el movimiento lleva la ficha más alla de la meta.
-	else if(casilla == 64){
-		casilla_64();
-	}
-	else if(casilla == 65){
-		casilla_65();
-	}
-	else if(casilla == 66){
-		casilla_66();
-	}
-	else if(casilla == 67){
-		casilla_67();
-	}
-	else if(casilla == 68){
-		casilla_68();
 	}
 }
 function alerta(mensaje){
@@ -278,110 +227,44 @@ function casilla_5(){
 	movimiento = 4;
 	moverFichasEspecial();
 }
+function casilla_15(){
+	oca();
+	movimiento = 5;
+	moverFichasEspecial();
+}
+function casilla_20(){
+	oca();
+	movimiento = 5;
+	moverFichasEspecial();
+}
+function casilla_25(){
+	oca();
+	movimiento = 4;
+	moverFichasEspecial();
+}
+function casilla_30(){
+	oca();
+	movimiento = 5;
+	moverFichasEspecial();
+}
+function casilla_35(){
+	oca();
+	movimiento = 4;
+	moverFichasEspecial();
+}
+//punte
 function casilla_9(){
-	oca();
-	movimiento = 5;
-	moverFichasEspecial();
-}
-function casilla_14(){
-	oca();
-	movimiento = 4;
-	moverFichasEspecial();
-}
-function casilla_18(){
-	oca();
-	movimiento = 5;
-	moverFichasEspecial();
-}
-function casilla_23(){
-	oca();
-	movimiento = 4;
-	moverFichasEspecial();
-}
-function casilla_27(){
-	oca();
-	movimiento = 5;
-	moverFichasEspecial();
-}
-function casilla_32(){
-	oca();
-	movimiento = 4;
-	moverFichasEspecial();
-}
-function casilla_36(){
-	oca();
-	movimiento = 5;
-	moverFichasEspecial();
-}
-function casilla_41(){
-	oca();
-	movimiento = 4;
-	moverFichasEspecial();
-}
-function casilla_45(){
-	oca();
-	movimiento = 5;
-	moverFichasEspecial();
-}
-function casilla_50(){
-	oca();
-	movimiento = 4;
-	moverFichasEspecial();
-}
-function casilla_54(){
-	oca();
-	movimiento = 5;
-	moverFichasEspecial();
-}
-function casilla_59(){
-	alerta('"De oca a oca y gane"');
-	movimiento = 4;
-	moverFichasEspecial();
-	casilla_63();
-}
-function casilla_63(){
-	alerta('"Gane!!!!!!!"');
-	finPartida();
-	ganador();
-}
-/************ Funciones para casillas con Puente *****************************************/
-function casilla_6(){
 	alerta('"De puente a puente y tiro porque me lleva la corriente"');
 	movimiento = 6;
 	moverFichasEspecial();
 }
-function casilla_12(){
+function casilla_18(){
 	alerta('"De puente a puente y tiro porque me lleva la corriente"');
 	movimiento = -6;
 	moverFichasEspecial();
 }
-/************ Funciones para casillas con Dados *****************************************/
-function casilla_26(){
-	alerta('"De dados a dados y tiro porque me ha tocado"');
-	movimiento = 27;
-	moverFichasEspecial();
-}
-function casilla_53(){
-	alerta('"De dados a dados y tiro porque me ha tocado"');
-	movimiento = -27;
-	moverFichasEspecial();
-}
-/************ Funcion para casilla Calavera *****************************************/
-function casilla_58(){
-	alerta('"Ohhhhhhhh vuelves a empezar"');
-	movimiento = -57;
-	moverFichasEspecial();
-	cambiarTurno();
-}
-/************ Funcion para casilla Laberinto *****************************************/
-function casilla_42(){
-	alerta('"Del laberinto al 30"');
-	movimiento = -12;
-	moverFichasEspecial();
-	cambiarTurno();
-}
 /************ Funciones de las casillas que pierden turnos ****************************/
-function casilla_19(){
+function casilla_13(){
 	alerta('"En la posada pierdes un turno"');
 	if(turnoRoja === true){
 		turnosPerdidosRoja = 1;
@@ -389,58 +272,6 @@ function casilla_19(){
 	if(turnoAmarilla === true){
 		turnosPerdidosAmarilla = 1;
 	}
-}
-function casilla_31(){
-	alerta('"En el pozo pierdes 2 turnos"');
-	if(turnoRoja === true){
-		turnosPerdidosRoja = 2;
-	}
-	if(turnoAmarilla === true){
-		turnosPerdidosAmarilla = 2;
-	}
-}
-function casilla_52(){
-	alerta('"En la carcel te quedas por 3 turnos"');
-	if(turnoRoja === true){
-		turnosPerdidosRoja = 3;
-	}
-	if(turnoAmarilla === true){
-		turnosPerdidosAmarilla = 3;
-	}
-}
-/************ Funciones de las casillas más alla de la meta ****************************/
-function casilla_64(){
-	alerta('"Te pasaste retrocede una casilla"');
-	movimiento = -2;
-	moverFichasEspecial();
-	cambiarTurno();
-}
-function casilla_65(){
-	alerta('"Te pasaste retrocede 2 casillas"');
-	movimiento = -4;
-	moverFichasEspecial();
-	cambiarTurno();
-}
-function casilla_66(){
-	alerta('"Te pasaste retrocede 3 casillas"');
-	movimiento = -6;
-	moverFichasEspecial();
-	cambiarTurno();
-}
-function casilla_67(){
-	alerta('"Te pasaste retrocede 4 casillas"');
-	movimiento = -8;
-	moverFichasEspecial();
-	cambiarTurno();
-	casilla_59();
-	alerta("Ganaste!!!");
-}
-function casilla_68(){
-	alerta('"Te pasaste retrocede 5 casillas"');
-	movimiento = -10;
-	moverFichasEspecial();
-	cambiarTurno();
-	casilla_58();
 }
 function sobre(){
 	var elementoDadoSorteo = document.getElementById("dadoSorteo");
@@ -508,11 +339,11 @@ var victoriasAmarillo = 0;
 var marcadorRojo, marcadorAmarillo;
 function ganador(){
 	var dadoGanador = document.getElementById("dadoGanador");
-	if(r == 63){
+	if(r == 40){
 		dadoGanador.style.backgroundImage="url('img/campeonRojo.png')";
 		victoriasRojo = victoriasRojo + 1;
 	}
-	if(a == 63){
+	if(a == 40){
 		dadoGanador.style.backgroundImage="url('img/campeonAmarillo.png')";
 		victoriasAmarillo = victoriasAmarillo + 1;
 	}
@@ -531,18 +362,13 @@ function cambiarCubilete(){
 	dado = document.getElementById("dadoEnJuego");
 	var dadoUrl;
 	if(turnoRoja === true){
-		// dado.classList.add("cubileteRojo");
-		// dado.classList.remove("cubileteAmarillo")
 		dadoUrl = "url(img/cubileteRojo.png)";
 		dado.style.backgroundImage=dadoUrl;
 	}else if(turnoAmarilla ===true){
-		// dado.classList.add("cubileteAmarillo");
-		// dado.classList.remove("cubileteRojo");
 		dadoUrl = "url(img/cubileteAmarillo.png)";
 		dado.style.backgroundImage=dadoUrl;
 	}
 }
-/***************Cambiar el dado en función del  movimiento**************/
 function cambiarDado(){
 	dado = document.getElementById("dadoEnJuego");
 	if(turnoRoja === true){
@@ -554,7 +380,6 @@ function cambiarDado(){
 		dado.style.backgroundImage=dadoUrl;
 	}
 }
-/*********************Jugador elige color*************************/
 function seleccionarFicha(color){
 	var colorJugador;
 	var juegasCon;
@@ -562,11 +387,9 @@ function seleccionarFicha(color){
 	if(color == "rojo"){
 		colorJugador = color;
 		juegasCon.innerHTML = "Juegas con la ficha roja"
-		// alert("Color "+color);
-	}
+		}
 	else if(color == "amarillo"){
 		colorJugador = color;
 		juegasCon.innerHTML = "Juegas con la ficha amarilla"
-		// alert("Color "+color)
 	}
 }
